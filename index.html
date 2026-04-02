@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Color Changer</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding-top: 100px;
+            transition: background 0.5s ease;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Choose Your Mood</h1>
+
+    <button onclick="changeMood('happy')">😊 Happy</button>
+    <button onclick="changeMood('sad')">😢 Sad</button>
+    <button onclick="changeMood('calm')">😌 Calm</button>
+    <button onclick="changeMood('angry')">😡 Angry</button>
+
+    <h2 id="message"></h2>
+
+    <script>
+        function changeMood(mood) {
+            let message = document.getElementById("message");
+
+            if (mood === "happy") {
+                document.body.style.background = "#ffe066";
+                message.innerText = "You are feeling Happy!";
+            }
+            else if (mood === "sad") {
+                document.body.style.background = "#74c0fc";
+                message.innerText = "You are feeling Sad!";
+            }
+            else if (mood === "calm") {
+                document.body.style.background = "#b2f2bb";
+                message.innerText = "You are feeling Calm!";
+            }
+            else if (mood === "angry") {
+                document.body.style.background = "#ff8787";
+                message.innerText = "You are feeling Angry!";
+            }
+        }
+    </script>
+
+</body>
+</html>
